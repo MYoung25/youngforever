@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next-on-pages --watch",
-    "dev:serve": "kill $(lsof -t -i:8788) && wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat --ip localhost",
+    "dev:serve": "kill $(lsof -t -i:8788); wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat --ip localhost",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
