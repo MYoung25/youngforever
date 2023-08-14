@@ -8,6 +8,11 @@ const showtimeFont = localFont({
   variable: "--font-showtime",
 });
 
+const debonairFont = localFont({
+  src: "./Debonair.ttf",
+  variable: "--font-debonair",
+});
+
 export const metadata: Metadata = {
   title: "Young Forever",
   description: "Premiering 10/12/2024",
@@ -20,7 +25,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={showtimeFont.variable}>{children}</body>
+      <body className={`${showtimeFont.variable} ${debonairFont.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

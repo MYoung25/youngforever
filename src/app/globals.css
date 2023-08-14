@@ -19,4 +19,5 @@ body {
   color: rgb(var(--foreground-rgb));
   background: url('/temple.svg') repeat,
     rgb(var(--background-rgb));
+  background-size: 90px;
 }

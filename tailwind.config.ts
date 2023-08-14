@@ -15,6 +15,7 @@ const config: Config = {
       },
       fontFamily: {
         showtime: ['var(--font-showtime)'],
+        debonair: ['var(--font-debonair)'],
       },
       colors: {
         'red': 'rgb(153, 27, 30)',
