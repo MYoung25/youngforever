@@ -6,6 +6,7 @@ export default function Home() {
         <div className="text-5xl text-gold bg-red font-showtime">
           [10/12/2024]
         </div>
+        <div className="text-4xl text-gold font-debonair mt-6">5pm - 11pm</div>
       </div>
     </main>
   );
