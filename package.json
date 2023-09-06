@@ -3,13 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next-on-pages --watch",
+    "dev": "next dev",
+    "dev:cf": "next-on-pages --watch",
     "dev:serve": "kill $(lsof -t -i:8788); wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat --ip localhost",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
+    "@next/mdx": "^13.4.19",
+    "@types/mdx": "^2.0.7",
     "@types/node": "20.4.10",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
@@ -19,13 +24,14 @@
     "next": "13.4.2",
     "postcss": "8.4.27",
     "react": "18.2.0",
+    "react-aria": "^3.27.0",
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.5.0",
-    "vercel": "^31.2.3",
+    "vercel": "^32.1.0",
     "wrangler": "^3.5.0"
   }
 }
