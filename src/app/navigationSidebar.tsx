@@ -51,10 +51,10 @@ export const NavigationSidebar = (props: Props) => {
           <div>
             <ul className="flex-col justify-evenly gap-4 md:flex flex-1 text-center text-gold">
               {props.menuItems.map((item) => (
-                <li key={item.path}>
+                <li key={item.path} className="my-3">
                   <Link
                     href={item.path}
-                    className="font-debonair text-gold text-2xl hover:text-white"
+                    className="font-debonair text-gold text-3xl hover:text-white"
                   >
                     {item.name}
                   </Link>

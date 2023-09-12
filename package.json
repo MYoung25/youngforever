@@ -5,12 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "dev:cf": "next-on-pages --watch",
-    "dev:serve": "kill $(lsof -t -i:8788); wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat --ip localhost",
+    "dev:serve": "kill $(lsof -t -i:8788); wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat --ip localhost --binding S3_BUCKET_NAME=$S3_BUCKET_NAME --binding S3_ACCESS_KEY_ID=$S3_ACCESS_KEY_ID --binding=S3_SECRET_ACCESS_KEY=$S3_SECRET_ACCESS_KEY --binding CLOUDFLARE_ACCOUNT_ID=$CLOUDFLARE_ACCOUNT_ID",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "3.409.0",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@next/mdx": "^13.4.19",
@@ -30,7 +31,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.5.0",
+    "@cloudflare/next-on-pages": "1.6.0",
     "vercel": "^32.1.0",
     "wrangler": "^3.5.0"
   }

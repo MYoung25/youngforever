@@ -32,7 +32,11 @@ export default function RootLayout({
     >
       <body>
         <Navigation />
-        <main className="mx-4 mt-24 p-1">{children}</main>
+        <div className="mx-4 p-1 pt-24 text-gold">
+          <main className="flex flex-col items-center place-content-center p-24">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );
