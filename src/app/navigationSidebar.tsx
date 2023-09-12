@@ -23,17 +23,6 @@ export const NavigationSidebar = (props: Props) => {
   }, []);
 
   /**
-   * Close modal when user clicks outside of it
-   */
-  useEffect(() => {
-    if (modalRef) {
-      modalRef.current?.on("close", () => {
-        setIsOpen(false);
-      });
-    }
-  }, [modalRef]);
-
-  /**
    * Add overflow-hidden to body when modal is open
    */
   useEffect(() => {
@@ -69,9 +58,6 @@ export const NavigationSidebar = (props: Props) => {
 
       {createPortal(
         <>
-          {/* {modalRef.current?.open && (
-            <div className="h-screen w-screen fixed top-0 left-0 z-50" />
-          )} */}
           <dialog
             ref={modalRef}
             className="backdrop:backdrop-blur-sm backdrop:overscroll-contain open:bg-red w-60 fixed py-5 top-0 right-0 z-40 rounded-md border-4 border-gold border-double"
